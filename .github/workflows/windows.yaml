@@ -37,5 +37,6 @@ jobs:
       - name: Build Plotjuggler
         shell: pwsh
         run: >
+          choco install pkgconfiglite
           cmake -Ax64 -T host=x64 -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
           cmake --build build --target install
