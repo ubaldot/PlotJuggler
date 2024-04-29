@@ -35,8 +35,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Install Homebrew libzmq
-        run: brew install libzmq
+      - name: Install Homebrew zeromq
+        run: brew install zeromq
 
       - name: Build Plotjuggler
         shell: pwsh
