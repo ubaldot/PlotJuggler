@@ -41,6 +41,7 @@ jobs:
       - name: Build Plotjuggler
         shell: bash
         run: >
+          QT_HOME=$(brew --prefix qt@5)
           export CPPFLAGS="-I $QT_HOME/include";
           export PKG_CONFIG_PATH="$QT_HOME/lib/pkgconfig";
           cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
