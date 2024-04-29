@@ -11,6 +11,7 @@ jobs:
       matrix:
         macos-version:
           - 'macos-latest'
+          - 'macos-14'
 
     steps:
       - name: Sync repository
@@ -41,5 +42,6 @@ jobs:
       - name: Build Plotjuggler
         shell: bash
         run: >
+          unset LDFLAGS;
           cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
           cmake --build build --target install
