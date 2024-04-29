@@ -47,6 +47,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" AND CMAKE_SYSTEM_PROCESSOR STREQUAL "arm6
 
     # Include ZeroMQ directories
     include_directories(${ZEROMQ_INCLUDE_DIRS})
+
+    find_library(ABSL_SPINLOCK_WAIT_LIB absl_spinlock_wait)
+
+    target_link_libraries(ProtobufParser ${ABSL_SPINLOCK_WAIT_LIB} )
 endif()
 
 find_package(ament_cmake QUIET)
