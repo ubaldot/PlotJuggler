@@ -31,8 +31,15 @@ jobs:
           dir: '${{ github.workspace }}/qt_installation/'
           cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Install Homebrew zeromq
+        run: brew install zeromq
+
       - name: Build Plotjuggler
-        shell: pwsh
+        shell: zsh
         run: >
           brew install zeromq
           cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
