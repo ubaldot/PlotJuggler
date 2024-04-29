@@ -34,9 +34,13 @@ jobs:
           dir: '${{ github.workspace }}/qt_installation/'
           cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
+      - name: Install pkgconfiglite
+        uses: crazy-max/ghaction-chocolatey@v3
+        with:
+          args: install pkgconfiglite
+
       - name: Build Plotjuggler
         shell: pwsh
         run: >
-          choco install pkgconfiglite
           cmake -Ax64 -T host=x64 -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
           cmake --build build --target install
