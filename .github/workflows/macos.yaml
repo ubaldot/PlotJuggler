@@ -37,7 +37,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Install Homebrew zeromq
-        run: brew install zeromq
+        run: brew install cmake qt@5 protobuf mosquitto zeromq zstd zmqpp
 
       - name: Build Plotjuggler
         shell: bash
