@@ -41,6 +41,5 @@ jobs:
       - name: Build Plotjuggler
         shell: zsh
         run: >
-          brew install zeromq
           cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
           cmake --build build --target install
