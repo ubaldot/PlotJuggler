@@ -44,5 +44,5 @@ jobs:
         run: >
           export CPPFLAGS="-I $QT_HOME/include";
           export PKG_CONFIG_PATH="$QT_HOME/lib/pkgconfig";
-          cmake -S src/PlotJuggler -B build/PlotJuggler -DCMAKE_INSTALL_PREFIX=install
-          cmake --build build/PlotJuggler --config RelWithDebInfo --target install
+          cmake -S src/PlotJuggler -B build/PlotJuggler -DCMAKE_INSTALL_PREFIX=install;
+          cmake --build build/PlotJuggler --config RelWithDebInfo --target install;
