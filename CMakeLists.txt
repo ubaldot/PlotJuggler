@@ -290,6 +290,7 @@ add_subdirectory( plotjuggler_plugins/ToolboxLuaEditor )
 add_subdirectory( plotjuggler_plugins/ParserProtobuf )
 add_subdirectory( plotjuggler_plugins/ParserROS )
 add_subdirectory( plotjuggler_plugins/ParserDataTamer )
+add_subdirectory( plotjuggler_plugins/ParserLineInflux )
 
 add_subdirectory( plotjuggler_plugins/PluginsZcm )
 
