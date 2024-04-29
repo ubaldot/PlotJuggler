@@ -11,7 +11,7 @@ jobs:
       matrix:
         macos-version:
           - 'macos-latest'
-          - 'macos-latest-xlarge'
+          - 'macos-latest-large'
 
     steps:
       - name: Sync repository
