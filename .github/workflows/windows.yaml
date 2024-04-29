@@ -37,7 +37,7 @@ jobs:
       - name: Install pkgconfiglite libzmq and zmqpp
         uses: crazy-max/ghaction-chocolatey@v3
         with:
-          args: install pkgconfiglite libzmq zmqpp
+          args: install pkgconfiglite zeromq
 
       - name: Build Plotjuggler
         shell: pwsh
