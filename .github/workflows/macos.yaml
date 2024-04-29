@@ -42,5 +42,7 @@ jobs:
       - name: Build Plotjuggler
         shell: bash
         run: >
-          cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
-          cmake --build build --target install
+          export CPPFLAGS="-I $QT_HOME/include"
+          export PKG_CONFIG_PATH="$QT_HOME/lib/pkgconfig"
+          cmake -S src/PlotJuggler -B build/PlotJuggler -DCMAKE_INSTALL_PREFIX=install
+          cmake --build build/PlotJuggler --config RelWithDebInfo --target install
