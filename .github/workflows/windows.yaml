@@ -34,11 +34,6 @@ jobs:
           dir: '${{ github.workspace }}/qt_installation/'
           cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
-      - name: Install pkgconfiglite libzmq and zmqpp
-        uses: crazy-max/ghaction-chocolatey@v3
-        with:
-          args: install pkgconfiglite zeromq
-
       - name: Build Plotjuggler
         shell: pwsh
         run: >
