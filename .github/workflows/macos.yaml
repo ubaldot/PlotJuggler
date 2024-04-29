@@ -41,5 +41,6 @@ jobs:
       - name: Build Plotjuggler
         shell: pwsh
         run: >
+          unset LDFLAGS
           cmake -B build -DCMAKE_INSTALL_PREFIX=install PlotJuggler;
           cmake --build build --target install
